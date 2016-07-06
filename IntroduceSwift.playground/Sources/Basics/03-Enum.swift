@@ -2,6 +2,8 @@ import Foundation
 
 //enum is named with singular for being more readable
 
+//for updating a value of struct in func "mutating" keyword is mandatory
+
 //enum type can be Int/String/Float
 public enum Rank:Int{
     case One = 1
@@ -70,4 +72,19 @@ enum ArithmeticExpression {
     case Number(Int)
     indirect case Addition(ArithmeticExpression, ArithmeticExpression)
     indirect case Multiplication(ArithmeticExpression, ArithmeticExpression)
+}
+
+//modify an enumeration
+enum TriStateSwitch {
+    case Off, Low, High
+    mutating func next() {
+        switch self {
+        case Off:
+            self = Low
+        case Low:
+            self = High
+        case High:
+            self = Off
+        }
+    }
 }

@@ -1,5 +1,7 @@
 import Foundation
 
+//inout for updating param of functions
+
 func sumFonction(first:Int,_ second:Int) -> Int{return first + second}
 //someFonction(1, 2)
 
@@ -78,3 +80,41 @@ func serveCustomer(@autoclosure customerProvider: () -> String) {
     print("Now serving \(customerProvider())!")
 }
 //serveCustomer(customers.removeAtIndex(0))
+
+//defer
+/*
+func writeLog() {
+    let file = openFile()
+    
+    let hardwareStatus = fetchHardwareStatus()
+    guard hardwareStatus != "disaster" else { return }
+    file.write(hardwareStatus)
+    
+    let softwareStatus = fetchSoftwareStatus()
+    guard softwareStatus != "disaster" else { return }
+    file.write(softwareStatus)
+    
+    let networkStatus = fetchNetworkStatus()
+    guard neworkStatus != "disaster" else { return }
+    file.write(networkStatus)
+    
+    closeFile(file)
+}
+
+func writeLog() {
+    let file = openFile()
+    defer { closeFile(file) }
+    
+    let hardwareStatus = fetchHardwareStatus()
+    guard hardwareStatus != "disaster" else { return }
+    file.write(hardwareStatus)
+    
+    let softwareStatus = fetchSoftwareStatus()
+    guard softwareStatus != "disaster" else { return }
+    file.write(softwareStatus)
+    
+    let networkStatus = fetchNetworkStatus()
+    guard neworkStatus != "disaster" else { return }
+    file.write(networkStatus)
+}
+*/

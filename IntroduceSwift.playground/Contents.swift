@@ -171,3 +171,8 @@ func checkSavage(savage:String?){
 if #available(iOS 9, OSX 10.10, *) {
     print("available")
 }
+
+//test type with "is"
+//ex: if item is String
+//AnyObject
+//Any (including func)
